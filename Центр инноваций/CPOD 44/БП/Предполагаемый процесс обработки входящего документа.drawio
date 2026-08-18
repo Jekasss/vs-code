@@ -1,0 +1,349 @@
+<mxfile host="Electron" agent="Codex">
+  <diagram id="incoming-processing" name="Процесс обработки">
+    <mxGraphModel dx="368459" dy="209999" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2600" pageHeight="1900" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="text;html=1;align=center;verticalAlign=middle;fontSize=24;fontStyle=1;fontColor=#1F2937;" value="Предполагаемый процесс обработки входящего документа" vertex="1">
+          <mxGeometry height="45" width="1420" x="-262550" y="-147190" as="geometry" />
+        </mxCell>
+        <mxCell id="legend" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F3F4F6;strokeColor=#9CA3AF;fontSize=12;" value="Зелёный — начало/завершение • Синий — действие • Фиолетовый — задача • Жёлтый — условие • Оранжевый — граница описания" vertex="1">
+          <mxGeometry height="42" width="1300" x="-262490" y="-147130" as="geometry" />
+        </mxCell>
+        <mxCell id="z_PSo4Glt2ce7-mQynwm-1" edge="1" parent="1" source="start" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="create">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="start" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#D5E8D4;strokeColor=#82B366;fontStyle=1;" value="Входящий документ получен" vertex="1">
+          <mxGeometry height="65" width="190" x="-263020" y="-146880" as="geometry" />
+        </mxCell>
+        <mxCell id="z_PSo4Glt2ce7-mQynwm-2" edge="1" parent="1" source="create" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="reviewTask">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="create" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#6C8EBF;" value="Ведущий юрисконсульт СЮСОИД&#xa;создаёт и регистрирует&#xa;входящий документ" vertex="1">
+          <mxGeometry height="95" width="240" x="-262780" y="-146895" as="geometry" />
+        </mxCell>
+        <mxCell id="z_PSo4Glt2ce7-mQynwm-3" edge="1" parent="1" source="reviewTask" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="review">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="reviewTask" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E1D5E7;strokeColor=#9673A6;fontStyle=1;" value="Директор ФЦИИТ&#xa;Задача «Рассмотреть»" vertex="1">
+          <mxGeometry height="85" width="230" x="-262490" y="-146890" as="geometry" />
+        </mxCell>
+        <mxCell id="z_PSo4Glt2ce7-mQynwm-4" edge="1" parent="1" source="review" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="listChoice">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="z_PSo4Glt2ce7-mQynwm-5" edge="1" parent="1" source="listChoice" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="twoDirector">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="z_PSo4Glt2ce7-mQynwm-8" edge="1" parent="1" source="review" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;" target="aware">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-261992.53" y="-146769.94" />
+              <mxPoint x="-261925" y="-146769.94" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="review" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#6C8EBF;" value="Назначить одного или двух исполнителей&#xa;При необходимости выбрать сотрудников&#xa;для ознакомления" vertex="1">
+          <mxGeometry height="105" width="290" x="-262210" y="-146900" as="geometry" />
+        </mxCell>
+        <mxCell id="aware" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D5E8D4;strokeColor=#82B366;dashed=1;" value="Параллельно: каждому выбранному сотруднику&#xa;задача «Ознакомиться»&#xa;Не блокирует подготовку ответа" vertex="1">
+          <mxGeometry height="95" width="290" x="-262070" y="-146730" as="geometry" />
+        </mxCell>
+        <mxCell id="z_PSo4Glt2ce7-mQynwm-9" edge="1" parent="1" source="listChoice" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="out1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="z_PSo4Glt2ce7-mQynwm-10" edge="1" parent="1" source="listChoice" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="out2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="listChoice" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;fontStyle=1;" value="К какому списку относится&#xa;выбранный исполнитель?" vertex="1">
+          <mxGeometry height="115" width="210" x="-261830" y="-146905" as="geometry" />
+        </mxCell>
+        <mxCell id="z_PSo4Glt2ce7-mQynwm-26" edge="1" parent="1" source="twoDirector" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" target="twoCreate">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="twoDirector" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#6C8EBF;fontStyle=1;" value="Директор назначает двух руководителей:&#xa;ответственного и соисполнителя" vertex="1">
+          <mxGeometry height="90" width="270" x="-262400" y="-146730" as="geometry" />
+        </mxCell>
+        <mxCell id="z_PSo4Glt2ce7-mQynwm-11" edge="1" parent="1" source="out1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="prepare1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="out1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#6C8EBF;" value="Автоматически создать исходящий документ&lt;br&gt;Исполнитель = выбранный сотрудник из администрации" vertex="1">
+          <mxGeometry height="90" width="280" x="-261560" y="-146892.5" as="geometry" />
+        </mxCell>
+        <mxCell id="z_PSo4Glt2ce7-mQynwm-13" edge="1" parent="1" source="prepare1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="extra1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="prepare1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E1D5E7;strokeColor=#9673A6;" value="Исполнитель из списка 1 «Администрация»&#xa;Задача «Подготовить ответ»&#xa;Можно указать дополнительных согласующих" vertex="1">
+          <mxGeometry height="110" width="310" x="-261215" y="-146902.5" as="geometry" />
+        </mxCell>
+        <mxCell id="z_PSo4Glt2ce7-mQynwm-15" edge="1" parent="1" source="extra1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="extraTask1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="z_PSo4Glt2ce7-mQynwm-54" connectable="0" parent="z_PSo4Glt2ce7-mQynwm-15" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Да" vertex="1">
+          <mxGeometry relative="1" x="-0.5738" y="-4" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="z_PSo4Glt2ce7-mQynwm-17" edge="1" parent="1" source="extra1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="sysoid1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-259818.97" y="-146846.76" />
+              <mxPoint x="-259818.97" y="-146579.22" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="z_PSo4Glt2ce7-mQynwm-55" connectable="0" parent="z_PSo4Glt2ce7-mQynwm-17" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Нет" vertex="1">
+          <mxGeometry relative="1" x="-0.7833" y="-2" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="extra1" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;" value="Есть дополнительные&#xa;согласующие?" vertex="1">
+          <mxGeometry height="105" width="190" x="-260069" y="-146899.25" as="geometry" />
+        </mxCell>
+        <mxCell id="extraTask1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E1D5E7;strokeColor=#9673A6;" value="Дополнительные согласующие&#xa;Задачи «Согласовать»" vertex="1">
+          <mxGeometry height="70" width="260" x="-260104" y="-146739.25" as="geometry" />
+        </mxCell>
+        <mxCell id="z_PSo4Glt2ce7-mQynwm-42" edge="1" parent="1" source="sysoid1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="registerOut">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sysoid1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E1D5E7;strokeColor=#9673A6;fontStyle=1;" value="Руководитель СЮСОИД&#xa;Задача «Согласовать»" vertex="1">
+          <mxGeometry height="80" width="260" x="-260110" y="-146619.25" as="geometry" />
+        </mxCell>
+        <mxCell id="z_PSo4Glt2ce7-mQynwm-22" edge="1" parent="1" source="out2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="leaderTask">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="out2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#6C8EBF;" value="Автоматически создать исходящий документ&lt;br&gt;Исполнитель = выбранный руководитель отдела" vertex="1">
+          <mxGeometry height="90" width="280" x="-261560" y="-146748" as="geometry" />
+        </mxCell>
+        <mxCell id="z_PSo4Glt2ce7-mQynwm-56" edge="1" parent="1" source="leaderTask" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="delegateChoice">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="leaderTask" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E1D5E7;strokeColor=#9673A6;" value="Руководитель из списка 2&#xa;получает задачу «Подготовить ответ»" vertex="1">
+          <mxGeometry height="80" width="300" x="-261570" y="-146600" as="geometry" />
+        </mxCell>
+        <mxCell id="z_PSo4Glt2ce7-mQynwm-43" edge="1" parent="1" source="delegateChoice" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="selfPrepare">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="z_PSo4Glt2ce7-mQynwm-44" edge="1" parent="1" source="delegateChoice" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="oneDelegate">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="z_PSo4Glt2ce7-mQynwm-45" edge="1" parent="1" source="delegateChoice" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="twoDelegate">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="delegateChoice" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;fontStyle=1;" value="Способ исполнения?" vertex="1">
+          <mxGeometry height="105" width="200" x="-261540" y="-146340" as="geometry" />
+        </mxCell>
+        <mxCell id="z_PSo4Glt2ce7-mQynwm-57" edge="1" parent="1" source="selfPrepare" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="isSysoid">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-260530" y="-146157.83" />
+              <mxPoint x="-260530" y="-146579.17" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="selfPrepare" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#6C8EBF;" value="2.1. Руководитель сам&#xa;подготавливает ответ&#xa;и завершает задачу" vertex="1">
+          <mxGeometry height="95" width="250" x="-261230" y="-146205.38" as="geometry" />
+        </mxCell>
+        <mxCell id="z_PSo4Glt2ce7-mQynwm-63" edge="1" parent="1" source="oneDelegate" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="z_PSo4Glt2ce7-mQynwm-62">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="oneDelegate" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#6C8EBF;" value="2.2. Один подчинённый&#xa;Задача «Подготовить ответ»" vertex="1">
+          <mxGeometry height="95" width="250" x="-261230" y="-146334.88" as="geometry" />
+        </mxCell>
+        <mxCell id="z_PSo4Glt2ce7-mQynwm-58" edge="1" parent="1" source="twoDelegate" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="factTask">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="twoDelegate" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#6C8EBF;" value="2.3. Два подчинённых&#xa;Ответственный + соисполнитель" vertex="1">
+          <mxGeometry height="95" width="250" x="-261230" y="-146464.63" as="geometry" />
+        </mxCell>
+        <mxCell id="z_PSo4Glt2ce7-mQynwm-59" edge="1" parent="1" source="factTask" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="finalTask">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-261240" y="-146542.5" />
+              <mxPoint x="-261240" y="-146691.67" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="factTask" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E1D5E7;strokeColor=#9673A6;" value="Соисполнитель&#xa;«Подготовить фактуру»" vertex="1">
+          <mxGeometry height="75" width="210" x="-261200" y="-146580" as="geometry" />
+        </mxCell>
+        <mxCell id="z_PSo4Glt2ce7-mQynwm-60" edge="1" parent="1" source="finalTask" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="leaderAgree2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="finalTask" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E1D5E7;strokeColor=#9673A6;" value="Ответственный исполнитель&#xa;«Подготовить итоговый проект ответа»&#xa;после получения фактуры" vertex="1">
+          <mxGeometry height="95" width="260" x="-261200" y="-146739.25" as="geometry" />
+        </mxCell>
+        <mxCell id="z_PSo4Glt2ce7-mQynwm-61" edge="1" parent="1" source="leaderAgree2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="isSysoid">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-260530" y="-146691.67" />
+              <mxPoint x="-260530" y="-146579.17" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="leaderAgree2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E1D5E7;strokeColor=#9673A6;" value="Руководитель, делегировавший выполнение&#xa;Задача «Согласовать»" vertex="1">
+          <mxGeometry height="80" width="300" x="-260880" y="-146731.75" as="geometry" />
+        </mxCell>
+        <mxCell id="z_PSo4Glt2ce7-mQynwm-49" edge="1" parent="1" source="isSysoid" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="sysoid1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="z_PSo4Glt2ce7-mQynwm-52" connectable="0" parent="z_PSo4Glt2ce7-mQynwm-49" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="нет" vertex="1">
+          <mxGeometry relative="1" x="-0.4" y="-4" as="geometry">
+            <mxPoint x="-28" y="-4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="z_PSo4Glt2ce7-mQynwm-50" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="registerOut">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-260380" y="-146509" />
+              <mxPoint x="-259980" y="-146509" />
+            </Array>
+            <mxPoint x="-260380" y="-146520.75" as="sourcePoint" />
+            <mxPoint x="-259744" y="-146478.25" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="z_PSo4Glt2ce7-mQynwm-53" connectable="0" parent="z_PSo4Glt2ce7-mQynwm-50" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Да" vertex="1">
+          <mxGeometry relative="1" x="-0.6559" y="-1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="isSysoid" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;" value="Подготовил / делегировал&#xa;руководитель СЮСОИД?" vertex="1">
+          <mxGeometry height="115" width="220" x="-260490" y="-146636.75" as="geometry" />
+        </mxCell>
+        <mxCell id="z_PSo4Glt2ce7-mQynwm-27" edge="1" parent="1" source="twoCreate" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="twoLeaderTasks">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="twoCreate" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#6C8EBF;" value="Создать один исходящий документ&#xa;и две задачи руководителям" vertex="1">
+          <mxGeometry height="80" width="260" x="-262620" y="-146600" as="geometry" />
+        </mxCell>
+        <mxCell id="z_PSo4Glt2ce7-mQynwm-28" edge="1" parent="1" source="twoLeaderTasks" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="twoDelegateBoth">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="twoLeaderTasks" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E1D5E7;strokeColor=#9673A6;" value="Ответственному: «Подготовить итоговый проект»&#xa;Соисполнителю: «Подготовить фактуру»" vertex="1">
+          <mxGeometry height="90" width="300" x="-262290" y="-146605" as="geometry" />
+        </mxCell>
+        <mxCell id="z_PSo4Glt2ce7-mQynwm-47" edge="1" parent="1" source="twoDelegateBoth" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="twoSubFact">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="twoDelegateBoth" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#6C8EBF;" value="Каждый руководитель делегирует&#xa;свою задачу подчинённому" vertex="1">
+          <mxGeometry height="80" width="270" x="-261950" y="-146600" as="geometry" />
+        </mxCell>
+        <mxCell id="z_PSo4Glt2ce7-mQynwm-30" edge="1" parent="1" source="twoSubFact" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="twoLeaderFact">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="twoSubFact" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E1D5E7;strokeColor=#9673A6;" value="Подчинённый-соисполнитель&#xa;Задача «Подготовить фактуру»" vertex="1">
+          <mxGeometry height="80" width="260" x="-261945" y="-146466.25" as="geometry" />
+        </mxCell>
+        <mxCell id="z_PSo4Glt2ce7-mQynwm-31" edge="1" parent="1" source="twoLeaderFact" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="twoSubFinal">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="twoLeaderFact" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E1D5E7;strokeColor=#9673A6;" value="Руководитель-соисполнитель&#xa;Задача «Согласовать фактуру»" vertex="1">
+          <mxGeometry height="80" width="260" x="-261945" y="-146334.63" as="geometry" />
+        </mxCell>
+        <mxCell id="z_PSo4Glt2ce7-mQynwm-32" edge="1" parent="1" source="twoSubFinal" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="twoLeaderFinal">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="twoSubFinal" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E1D5E7;strokeColor=#9673A6;" value="Подчинённый-ответственный&#xa;Задача «Подготовить итоговый проект ответа»" vertex="1">
+          <mxGeometry height="90" width="290" x="-261960" y="-146200" as="geometry" />
+        </mxCell>
+        <mxCell id="z_PSo4Glt2ce7-mQynwm-46" edge="1" parent="1" source="twoLeaderFinal" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="isSysoid">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-260529.94" y="-146004.53" />
+              <mxPoint x="-260529.94" y="-146579.24" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="twoLeaderFinal" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E1D5E7;strokeColor=#9673A6;" value="Ответственный руководитель&#xa;Задача «Согласовать итоговый проект»" vertex="1">
+          <mxGeometry height="85" width="280" x="-261955" y="-146047" as="geometry" />
+        </mxCell>
+        <mxCell id="z_PSo4Glt2ce7-mQynwm-41" edge="1" parent="1" source="registerOut" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="sign">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="registerOut" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E1D5E7;strokeColor=#9673A6;" value="Ведущий юрисконсульт СЮСОИД&#xa;Задача «Зарегистрировать»&#xa;Регистрация исходящего документа" vertex="1">
+          <mxGeometry height="100" width="290" x="-260125" y="-146450" as="geometry" />
+        </mxCell>
+        <mxCell id="z_PSo4Glt2ce7-mQynwm-37" edge="1" parent="1" source="sign" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="sendChoice">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sign" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E1D5E7;strokeColor=#9673A6;fontStyle=1;" value="Директор ФЦИИТ&#xa;Задача «Подписать»" vertex="1">
+          <mxGeometry height="80" width="230" x="-260095" y="-146270" as="geometry" />
+        </mxCell>
+        <mxCell id="z_PSo4Glt2ce7-mQynwm-38" edge="1" parent="1" source="sendChoice" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="email">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="z_PSo4Glt2ce7-mQynwm-39" edge="1" parent="1" source="sendChoice" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="other">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sendChoice" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;fontStyle=1;" value="Способ отправки?" vertex="1">
+          <mxGeometry height="100" width="190" x="-260075" y="-146140" as="geometry" />
+        </mxCell>
+        <mxCell id="email" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D5E8D4;strokeColor=#82B366;" value="E-mail&#xa;Система автоматически&#xa;отправляет письмо" vertex="1">
+          <mxGeometry height="90" width="220" x="-260270" y="-145974.25" as="geometry" />
+        </mxCell>
+        <mxCell id="z_PSo4Glt2ce7-mQynwm-40" edge="1" parent="1" source="other" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="end">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="other" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E1D5E7;strokeColor=#9673A6;" value="Иной способ&#xa;Ведущий юрисконсульт СЮСОИД&#xa;Задача «Направить документ»" vertex="1">
+          <mxGeometry height="100" width="250" x="-259830" y="-146140" as="geometry" />
+        </mxCell>
+        <mxCell id="end" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#D5E8D4;strokeColor=#82B366;fontStyle=1;" value="Ответ отправлен&#xa;Процесс завершён" vertex="1">
+          <mxGeometry height="75" width="210" x="-259810" y="-145966.75" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="start" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" target="create" />
+        <mxCell id="e2" edge="1" parent="1" source="create" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" target="reviewTask" />
+        <mxCell id="e3" edge="1" parent="1" source="reviewTask" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" target="review" />
+        <mxCell id="e4" edge="1" parent="1" source="review" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" target="listChoice" />
+        <mxCell id="e5" edge="1" parent="1" source="review" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;dashed=1;" target="aware" />
+        <mxCell id="e6" edge="1" parent="1" source="review" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" target="twoDirector" value="2 руководителя" />
+        <mxCell id="e7" edge="1" parent="1" source="listChoice" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" target="out1" value="Список 1" />
+        <mxCell id="e8" edge="1" parent="1" source="out1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" target="prepare1" />
+        <mxCell id="e9" edge="1" parent="1" source="prepare1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" target="extra1" />
+        <mxCell id="e10" edge="1" parent="1" source="extra1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" target="extraTask1" value="Да" />
+        <mxCell id="e11" edge="1" parent="1" source="extraTask1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" target="sysoid1" />
+        <mxCell id="e12" edge="1" parent="1" source="extra1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" target="sysoid1" value="Нет" />
+        <mxCell id="e13" edge="1" parent="1" source="sysoid1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" />
+        <mxCell id="e14" edge="1" parent="1" source="listChoice" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" target="out2" value="Список 2" />
+        <mxCell id="e15" edge="1" parent="1" source="out2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" target="leaderTask" />
+        <mxCell id="e16" edge="1" parent="1" source="leaderTask" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" target="delegateChoice" />
+        <mxCell id="e17" edge="1" parent="1" source="delegateChoice" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" target="selfPrepare" value="Сам" />
+        <mxCell id="e18" edge="1" parent="1" source="delegateChoice" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" target="oneDelegate" value="1 подчинённый" />
+        <mxCell id="e19" edge="1" parent="1" source="delegateChoice" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" target="twoDelegate" value="2 подчинённых" />
+        <mxCell id="e20" edge="1" parent="1" source="oneDelegate" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" />
+        <mxCell id="e21" edge="1" parent="1" source="twoDelegate" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" target="factTask" />
+        <mxCell id="e22" edge="1" parent="1" source="factTask" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" target="finalTask" />
+        <mxCell id="e23" edge="1" parent="1" source="finalTask" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" target="leaderAgree2" />
+        <mxCell id="e24" edge="1" parent="1" source="selfPrepare" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" target="isSysoid" />
+        <mxCell id="e25" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" target="isSysoid" />
+        <mxCell id="e26" edge="1" parent="1" source="leaderAgree2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" target="isSysoid" />
+        <mxCell id="e27" edge="1" parent="1" source="isSysoid" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" value="Нет" />
+        <mxCell id="e28" edge="1" parent="1" source="isSysoid" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" value="Да — пропустить" />
+        <mxCell id="e29" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" />
+        <mxCell id="e37" edge="1" parent="1" source="twoDirector" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" target="twoCreate" />
+        <mxCell id="e38" edge="1" parent="1" source="twoCreate" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" target="twoLeaderTasks" />
+        <mxCell id="e39" edge="1" parent="1" source="twoLeaderTasks" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" target="twoDelegateBoth" />
+        <mxCell id="e40" edge="1" parent="1" source="twoDelegateBoth" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" target="twoSubFact" />
+        <mxCell id="e41" edge="1" parent="1" source="twoSubFact" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" target="twoLeaderFact" />
+        <mxCell id="e42" edge="1" parent="1" source="twoLeaderFact" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" target="twoSubFinal" value="Фактура согласована" />
+        <mxCell id="e43" edge="1" parent="1" source="twoSubFinal" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" target="twoLeaderFinal" />
+        <mxCell id="e44" edge="1" parent="1" source="twoLeaderFinal" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" />
+        <mxCell id="e45" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" />
+        <mxCell id="e30" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" target="registerOut" />
+        <mxCell id="e31" edge="1" parent="1" source="registerOut" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" target="sign" />
+        <mxCell id="e32" edge="1" parent="1" source="sign" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" target="sendChoice" />
+        <mxCell id="e33" edge="1" parent="1" source="sendChoice" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" target="email" value="E-mail" />
+        <mxCell id="e34" edge="1" parent="1" source="sendChoice" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" target="other" value="Иной" />
+        <mxCell id="e35" edge="1" parent="1" source="email" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" target="end" />
+        <mxCell id="e36" edge="1" parent="1" source="other" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" target="end" />
+        <mxCell id="z_PSo4Glt2ce7-mQynwm-16" edge="1" parent="1" source="extraTask1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.523;entryY=-0.03;entryDx=0;entryDy=0;entryPerimeter=0;" target="sysoid1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="z_PSo4Glt2ce7-mQynwm-64" edge="1" parent="1" source="z_PSo4Glt2ce7-mQynwm-62" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="leaderAgree2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="z_PSo4Glt2ce7-mQynwm-62" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E1D5E7;strokeColor=#9673A6;" value="Исполнитель&lt;br&gt;«Подготовить проект ответа»" vertex="1">
+          <mxGeometry height="95" width="260" x="-260860" y="-146335" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
